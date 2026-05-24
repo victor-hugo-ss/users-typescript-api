@@ -5,7 +5,7 @@ import type {
 import { MongoClient } from "../../database/mongo.js";
 import type { User } from "../../models/user.js";
 
-export class MongoCreateUser implements IcreateUserRepository {
+export class MongoCreateUserRepository implements IcreateUserRepository {
   async createUser(params: CreateUserParams): Promise<User> {
     const { insertedId } = await MongoClient.db
       .collection("users")
