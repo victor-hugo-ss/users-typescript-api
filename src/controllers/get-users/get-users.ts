@@ -1,4 +1,3 @@
-import { STATUS_CODES } from "node:http";
 import type { IGetUsersController, IGetUsersRepository } from "./protocols.js";
 
 export class GetUsersController implements IGetUsersController {
