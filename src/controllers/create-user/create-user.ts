@@ -1,14 +1,10 @@
 import validator from "validator";
 
 import type { User } from "../../models/user.js";
-import type { HttpRequest, HttpResponse } from "../protocols.js";
-import type {
-  CreateUserParams,
-  IcreateUserController,
-  IcreateUserRepository,
-} from "./protocols.js";
+import type { HttpRequest, HttpResponse, IController } from "../protocols.js";
+import type { CreateUserParams, IcreateUserRepository } from "./protocols.js";
 
-export class CreateUserController implements IcreateUserController {
+export class CreateUserController implements IController {
   constructor(private readonly createUserRepository: IcreateUserRepository) {}
   async handle(
     httpRequest: HttpRequest<CreateUserParams>,
