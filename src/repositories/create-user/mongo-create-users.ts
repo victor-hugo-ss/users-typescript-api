@@ -4,6 +4,7 @@ import type {
 } from "../../controllers/create-user/protocols.js";
 import { MongoClient } from "../../database/mongo.js";
 import type { User } from "../../models/user.js";
+import type { MongoUser } from "../mongo-protocols.js";
 
 export class MongoCreateUserRepository implements IcreateUserRepository {
   async createUser(params: CreateUserParams): Promise<User> {

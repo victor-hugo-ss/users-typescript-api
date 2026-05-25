@@ -5,6 +5,7 @@ import type {
 } from "../../controllers/update-user/protocols.js";
 import { MongoClient } from "../../database/mongo.js";
 import type { User } from "../../models/user.js";
+import type { MongoUser } from "../mongo-protocols.js";
 
 export class MongoUpdateUserRepository implements IUpdateUserRepository {
   async updateUser(id: string, params: UpdateUserParams): Promise<User> {
