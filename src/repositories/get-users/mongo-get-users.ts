@@ -5,7 +5,7 @@ import type { User } from "../../models/user.js";
 export class MongoGetUsersRepository implements IGetUsersRepository {
   async getUsers(): Promise<User[]> {
     const users = await MongoClient.db
-      .collection<Omit<User, "id">>("users")
+      .collection<MongoUser>("users")
       .find({})
       .toArray();
 
